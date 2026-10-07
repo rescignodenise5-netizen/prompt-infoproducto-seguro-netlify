@@ -1,0 +1,5 @@
+[build]
+  publish = "."
+
+# La configuración de producción, Functions, Identity y protección por rol
+# se completará y verificará antes del primer deploy autorizado.
