@@ -1,4 +1,8 @@
-# IMPORTANTE: estas reglas son un marcador seguro de desarrollo.
-# Antes de producción se reemplazarán por las reglas Role=buyer verificadas
-# junto con Netlify Identity. No publicar el portal como contenido protegido
-# hasta completar esa configuración.
+/portal.html /portal.html 200! Role=buyer
+/portal.html /login.html 401!
+/portal /portal.html 200! Role=buyer
+/portal /login.html 401!
+/portal/ /portal.html 200! Role=buyer
+/portal/ /login.html 401!
+/recursos/* /recursos/:splat 200! Role=buyer
+/recursos/* /login.html 401!

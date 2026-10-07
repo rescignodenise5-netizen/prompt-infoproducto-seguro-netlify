@@ -1,5 +1,8 @@
 [build]
-  publish = "."
-
-# La configuración de producción, Functions, Identity y protección por rol
-# se completará y verificará antes del primer deploy autorizado.
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+[functions]
+  node_bundler = "esbuild"
+[build.environment]
+  NODE_VERSION = "24"
